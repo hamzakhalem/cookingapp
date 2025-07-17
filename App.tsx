@@ -1,28 +1,45 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
+// App.js
+import React, { useEffect, useState } from 'react';
+import { NavigationContainer, DarkTheme as NavigationDarkTheme } from '@react-navigation/native';
+import AppNavigator from './src/navigation/AppNavigator';
+import { View, Text, StyleSheet, ActivityIndicator } from 'react-native';
 
-import { NewAppScreen } from '@react-native/new-app-screen';
-import { StatusBar, StyleSheet, useColorScheme, View } from 'react-native';
+export default function App() {
+  const [loading, setLoading] = useState(true);
 
-function App() {
-  const isDarkMode = useColorScheme() === 'dark';
+  useEffect(() => {
+    // Simulate loading (e.g., fetch resources, check auth, etc.)
+    const timer = setTimeout(() => setLoading(false), 2000);
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (loading) {
+    return (
+      <View style={styles.splashContainer}>
+        <Text style={styles.splashText}>CookinApp</Text>
+        <ActivityIndicator size="large" color="#ff9800" />
+      </View>
+    );
+  }
 
   return (
-    <View style={styles.container}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <NewAppScreen templateFileName="App.tsx" />
-    </View>
+    <NavigationContainer theme={NavigationDarkTheme}>
+      <AppNavigator />
+    </NavigationContainer>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  splashContainer: {
     flex: 1,
+    backgroundColor: '#181A20',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  splashText: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#ff9800',
+    marginBottom: 20,
   },
 });
-
-export default App;
