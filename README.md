@@ -1,97 +1,111 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# CookinApp
 
-# Getting Started
+CookinApp is a modern, mobile-first recipe and ingredient management app built with **React Native**. It allows users to select ingredients, discover recipes based on their selections, and supports multiple languages and dark mode for a beautiful, accessible experience.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+## Features
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+- 🌙 **Dark Mode** UI throughout the app, including navigation and headers
+- 🥕 **Ingredient Selector** with categories (Vegetables, Meat, Seafood, Dairy, Grains, Legumes, Condiments, Fruits, Oils & Fats, Herbs & Spices)
+- 🍽️ **Recipe Discovery**: Find recipes based on selected ingredients
+- 🌐 **Multi-language Support** (English & French out of the box)
+- 🎨 **Gradient Buttons** and modern UI elements
+- 🖼️ **Ingredient Icons** for visual selection
+- 🚀 **Splash Screen** for a polished startup experience
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+---
 
-```sh
-# Using npm
-npm start
+## Getting Started
 
-# OR using Yarn
-yarn start
+### Prerequisites
+
+- [Node.js](https://nodejs.org/)
+- [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
+- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- Android Studio or Xcode for device/simulator
+
+### Installation
+
+1. **Clone the repository:**
+   ```sh
+   git clone <your-repo-url>
+   cd cockingApp
+   ```
+
+2. **Install dependencies:**
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Install CocoaPods for iOS (macOS only):**
+   ```sh
+   cd ios
+   pod install
+   cd ..
+   ```
+
+4. **Start Metro Bundler:**
+   ```sh
+   npm start
+   # or
+   yarn start
+   ```
+
+5. **Run the app:**
+   - **Android:** `npm run android` or `yarn android`
+   - **iOS:** `npm run ios` or `yarn ios`
+
+---
+
+## Project Structure
+
+```
+cockingApp/
+├── App.tsx
+├── src/
+│   ├── api/
+│   ├── components/
+│   ├── data/
+│   ├── i18n/
+│   ├── navigation/
+│   └── screens/
+├── assets/
+│   └── icons/
+└── ...
 ```
 
-## Step 2: Build and run your app
+---
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+## Customization
 
-### Android
+- **Add more languages:** Edit `src/i18n/translations.js`
+- **Add more ingredients or categories:** Edit `src/data/ingredientsByCategory.js`
+- **Customize theme:** Edit styles in components or navigation theme in `App.tsx`
 
-```sh
-# Using npm
-npm run android
+---
 
-# OR using Yarn
-yarn android
-```
+## Troubleshooting
 
-### iOS
+- If you have issues running the app, see the [React Native Troubleshooting Guide](https://reactnative.dev/docs/troubleshooting).
+- For Metro issues, try `npx react-native start --reset-cache`.
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
+---
 
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
+## License
 
-```sh
-bundle install
-```
+MIT
 
-Then, and every time you update your native dependencies, run:
+---
 
-```sh
-bundle exec pod install
-```
+## Credits
 
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
+- Built with [React Native](https://reactnative.dev/)
+- Uses [react-i18next](https://react.i18next.com/) for localization
+- Gradient UI powered by [react-native-linear-gradient](https://github.com/react-native-linear-gradient/react-native-linear-gradient)
 
-```sh
-# Using npm
-npm run ios
+---
 
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+Happy cooking! 🍳
