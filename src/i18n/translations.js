@@ -162,7 +162,9 @@ export default {
         Oregano: "Oregano",
         Thyme: "Thyme"
       },
-      search_placeholder: "Search ingredients..."
+      search_placeholder: "Search ingredients...",
+      select_ingredients: "Select Ingredients",
+      find_recipes: "Find Recipes"
     }
   },
   fr: {
@@ -328,7 +330,9 @@ export default {
         Oregano: "Origan",
         Thyme: "Thym"
       },
-      search_placeholder: "Rechercher des ingrédients..."
+      search_placeholder: "Rechercher des ingrédients...",
+      select_ingredients: "Sélectionnez les ingrédients",
+      find_recipes: "Trouver des recettes"
     }
   },
   ar: {
@@ -494,7 +498,9 @@ export default {
         Oregano: "أوريجانو",
         Thyme: "زعتر"
       },
-      search_placeholder: "ابحث عن المكونات..."
+      search_placeholder: "ابحث عن المكونات...",
+      select_ingredients: "اختر المكونات",
+      find_recipes: "ابحث عن وصفات"
     }
   }
 };

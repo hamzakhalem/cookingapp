@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, ScrollView, TouchableOpacity } from 'react-nati
 import IngredientSelector from '../components/IngredientSelector';
 import { INGREDIENT_CATEGORIES } from '../data/ingredientsByCategory';
 import LinearGradient from 'react-native-linear-gradient'; // Make sure you have this package installed
+import I18n from '../i18n/i18n'; 
 
 export default function HomeScreen({ navigation }) {
   const [selectedIngredients, setSelectedIngredients] = useState([]);
@@ -17,7 +18,7 @@ export default function HomeScreen({ navigation }) {
 
   return (
     <ScrollView contentContainerStyle={styles.scrollContainer}>
-      <Text style={styles.title}>Select Ingredients</Text>
+      <Text style={styles.title}>{I18n.t(`select_ingredients`)}</Text>
       <IngredientSelector
         categories={INGREDIENT_CATEGORIES}
         selected={selectedIngredients}
@@ -36,7 +37,7 @@ export default function HomeScreen({ navigation }) {
           start={{ x: 0, y: 0 }}
           end={{ x: 1, y: 0 }}
         >
-          <Text style={styles.buttonText}>Find Recipes</Text>
+          <Text style={styles.buttonText}>{I18n.t(`find_recipes`)}</Text>
         </LinearGradient>
       </TouchableOpacity>
     </ScrollView>
