@@ -33,28 +33,34 @@ CookinApp is a modern, mobile-first recipe and ingredient management app built w
    cd cockingApp
    ```
 
-2. **Install dependencies:**
+2. **Add your Spoonacular API key:**
+   ```sh
+   cp src/constants/config.example.js src/constants/config.js
+   ```
+   Then put your own key (free at https://spoonacular.com/food-api/console) in `config.js`. That file is in `.gitignore`, so your key is never committed.
+
+3. **Install dependencies:**
    ```sh
    npm install
    # or
    yarn install
    ```
 
-3. **Install CocoaPods for iOS (macOS only):**
+4. **Install CocoaPods for iOS (macOS only):**
    ```sh
    cd ios
    pod install
    cd ..
    ```
 
-4. **Start Metro Bundler:**
+5. **Start Metro Bundler:**
    ```sh
    npm start
    # or
    yarn start
    ```
 
-5. **Run the app:**
+6. **Run the app:**
    - **Android:** `npm run android` or `yarn android`
    - **iOS:** `npm run ios` or `yarn ios`
 
