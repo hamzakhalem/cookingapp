@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_KEY = '5a2a464f9df145108f6f735ae5f30097'; // Replace with your Spoonacular API key
+import { SPOONACULAR_API_KEY as API_KEY } from '../constants/config';
 const BASE_URL = 'https://api.spoonacular.com/recipes';
 
 export async function fetchRecipesByIngredients(ingredients) {
