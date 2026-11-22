@@ -8,7 +8,7 @@ CookinApp is a modern, mobile-first recipe and ingredient management app built w
 
 - 🌙 **Dark Mode** UI throughout the app, including navigation and headers
 - 🥕 **Ingredient Selector** with categories (Vegetables, Meat, Seafood, Dairy, Grains, Legumes, Condiments, Fruits, Oils & Fats, Herbs & Spices)
-- 🍽️ **Recipe Discovery**: Find recipes based on selected ingredients
+- 🍽️ **Recipe Discovery**: Find recipes that use your selected ingredients, powered by the [Spoonacular API](https://spoonacular.com/food-api)
 - 🌐 **Multi-language Support** (English & French out of the box)
 - 🎨 **Gradient Buttons** and modern UI elements
 - 🖼️ **Ingredient Icons** for visual selection
@@ -20,17 +20,17 @@ CookinApp is a modern, mobile-first recipe and ingredient management app built w
 
 ### Prerequisites
 
-- [Node.js](https://nodejs.org/)
+- [Node.js](https://nodejs.org/) 18 or newer
 - [Yarn](https://yarnpkg.com/) or [npm](https://www.npmjs.com/)
-- [React Native CLI](https://reactnative.dev/docs/environment-setup)
+- A working [React Native environment](https://reactnative.dev/docs/set-up-your-environment) (the app uses React Native 0.80)
 - Android Studio or Xcode for device/simulator
 
 ### Installation
 
 1. **Clone the repository:**
    ```sh
-   git clone <your-repo-url>
-   cd cockingApp
+   git clone https://github.com/hamzakhalem/cookingapp.git
+   cd cookingapp
    ```
 
 2. **Add your Spoonacular API key:**
@@ -48,9 +48,8 @@ CookinApp is a modern, mobile-first recipe and ingredient management app built w
 
 4. **Install CocoaPods for iOS (macOS only):**
    ```sh
-   cd ios
-   pod install
-   cd ..
+   bundle install
+   cd ios && bundle exec pod install && cd ..
    ```
 
 5. **Start Metro Bundler:**
@@ -68,19 +67,22 @@ CookinApp is a modern, mobile-first recipe and ingredient management app built w
 
 ## Project Structure
 
-```
-cockingApp/
+```text
+cookingapp/
 ├── App.tsx
 ├── src/
-│   ├── api/
-│   ├── components/
-│   ├── data/
-│   ├── i18n/
+│   ├── api/          Spoonacular requests
+│   ├── assets/       logo and ingredient icons
+│   ├── components/   ingredient input, item and selector
+│   ├── constants/    config.js with your API key (git-ignored)
+│   ├── data/         ingredients and categories
+│   ├── hooks/        useFetchRecipes
+│   ├── i18n/         English and French translations
 │   ├── navigation/
-│   └── screens/
-├── assets/
-│   └── icons/
-└── ...
+│   ├── screens/      Home and Recipes
+│   └── styles/
+├── android/
+└── ios/
 ```
 
 ---
@@ -102,7 +104,7 @@ cockingApp/
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 ---
 
